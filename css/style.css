@@ -1,0 +1,136 @@
+* {
+margin: 0px;
+padding: 0px;
+}
+body {
+	/*background: radial-gradient(#673AB7, #00968859);*/
+	background: #a9a9a9;
+    font-family: sans-serif;
+	    background-image: radial-gradient(#445158, #607D8B);
+    background-size: cover;
+	background-position: unset;
+	background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.wrapper{
+	/*outline: 10px solid #36ae87;*/
+	min-height: 100vh;
+	max-width:960px;
+	margin:0px auto;
+	position: relative;
+}
+
+#header .logo h3 {
+flex-grow: 1;
+text-align: right;
+font-family: sans-serif;
+font-size: 28px;
+color: #fff;
+margin-top:0px;
+}
+
+#header .logo {
+margin: 0px auto;
+display: flex;
+align-items: center;
+}
+#header {
+padding: 15px;
+}
+
+#innerWrapper{
+    max-width: 960px;
+    margin: 15px;
+}
+
+#innerWrapper h2{
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+	left: -70px;
+}
+.questionNo{color: #fff; text-align: center; margin-bottom:30px;}
+.question{color: #fff; text-align: center; font-size: 16px;}
+
+.ansContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+.imgContainer img{}
+.optContainer {
+    display: flex;
+    flex-direction: column;
+}
+.optContainer p::selection{
+    background: transparent;
+}
+.optContainer p{
+    transition: 0.5s all ease; 
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    color: #fff;
+    cursor:pointer;
+    caret-color: transparent;
+    position: relative;
+}
+
+.optContainer p img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -35px;
+}
+
+
+.optContainer p:hover{ background:#ffffff4d; transition: 0.5s all ease; }
+.optContainer p:active{ background-color: #000; transition: 0.5s all ease; }
+
+.nav{
+    padding: 0px 10px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+}
+.nav img:nth-child(1){
+float:left;
+}
+.nav img:nth-child(2){
+    float:right;
+}
+.nav img{
+    width: 120px;
+    cursor:pointer;
+    z-index:999;
+    position: relative;
+}
+
+
+
+@media screen and (max-width: 500px) {
+.logoWrapper img{width:100px;}
+#header .logo h3{font-size:20px;}
+.ansContainer{
+        flex-direction: column;
+            margin-top: 10px;
+}
+.imgContainer img{
+width:100px;
+margin-bottom:20px;
+}
+.question{font-size: 13px;}
+
+.questionNo {margin-bottom:10px;}
+#header{padding-bottom:0px; margin-bottom:0px;}
+.optContainer p{
+        padding: 5px 5px;
+}
+
+.nav img{width:100px;}
+
+} 
+/*  // media quesry end here...*/
