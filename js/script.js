@@ -43,12 +43,13 @@ $(function() {
 
     $('.optContainer p').click(function(){
         if($(this).hasClass('correctAns')){
-          console.log('correct ans');
+          // console.log('correct ans');
+          playAudio('audio/welldone.mp3');
           $(this).append("<img src='img/right.png' />");
         }else{
           console.log('incorrect Ans');
           $(this).append("<img src='img/wrong.png' />");
-
+          playAudio('audio/tryAgain.mp3');
         }
     });
 
@@ -82,7 +83,12 @@ $(function() {
         $('#next').hide();
     }
 
+   // playAudio
 
+   function playAudio(music){
+    let audio = new Audio(music);
+    audio.play();
+   }
 
 
 });   // end document function 
